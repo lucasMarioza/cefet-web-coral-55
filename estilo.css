@@ -5,6 +5,7 @@
 
 body {
   background-color: #fff;
+  margin: 0;
   font-family: "verdana";
 }
 
@@ -43,27 +44,33 @@ strong {
 
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
-  /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+  margin: 0 auto;
+  width: 800px;
+  display: grid;
+  grid:  [row1-start] "lateral cabecalho" auto [row1-end]
+         [row2-start] "lateral cardapio" 1fr [row2-end]
+         [row2-start] "lateral rodape" auto [row2-end]
+         / 154px auto;
+}
+
+html, body, #recipiente {
+  min-height: 100vh;
 }
 
 #cabecalho-pagina {
-
+  grid-area: cabecalho;
 }
 
 #lateral {
-
+  grid-area: lateral;
 }
 
 #cardapio {
-
+  grid-area: cardapio;
 }
 
 #rodape-pagina {
-
+  grid-area: rodape;
 }
 
 
