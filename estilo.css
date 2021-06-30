@@ -97,7 +97,14 @@ html, body, #recipiente {
 }
 
 /* EXERCÍCIO 4: cada item do menu */
+#cardapio {
+  padding: 0 20px;
+}
+
 article {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 
