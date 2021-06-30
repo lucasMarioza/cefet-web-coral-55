@@ -3,8 +3,22 @@
 @import "fonts/ravie.css";
 @import "fonts/verdana.css";
 
+:root {
+  --cor-do-texto: #333;
+  --cor-de-fundo: #fff;
+  --cor-cardapio: linear-gradient(to bottom, #f6f1b2, #4599b2 80%)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-do-texto: #eee;
+    --cor-de-fundo: #000;
+    --cor-do-cardapio: linear-gradient(to bottom, #222255, #000022 80%)
+  }
+}
+
 body {
-  background-color: #fff;
+  background-color: var(--cor-de-fundo);
   margin: 0;
   font-family: "verdana";
 }
@@ -18,7 +32,7 @@ strong {
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
+  background-image: var(--cor-do-cardapio);
   border-left: 1px solid #d3d3d3;
   border-right: 1px solid #d3d3d3;
 }
@@ -32,13 +46,13 @@ strong {
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--cor-do-texto);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--cor-do-texto);
 }
 
 
@@ -91,7 +105,7 @@ html, body, #recipiente {
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--cor-do-texto);
   font-weight: normal;
   text-align: right;
 }
