@@ -125,9 +125,14 @@ article {
 
 /* EXERCÍCIO 7: o ticket */
 #ticket {
+  position: fixed;
+  top: calc((100vh - 84px)/2);
+  left: -84px;
+  transition: left .5s;
 }
 
 #ticket:hover {
+  left: 0;
 }
 
 
